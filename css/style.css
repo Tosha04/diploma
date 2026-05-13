@@ -1,0 +1,355 @@
+body {
+    background-color: #0f172a; /* Базовий глибокий синій */
+    color: #f8fafc;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* 3. Гарантуємо, що зображення не вилазять за межі екрана */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 4. Фікс для Hero-секції (головного екрана) */
+.welcome-image {
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+}
+
+/* 5. Адаптивність для карток та секцій на малих екранах */
+@media (max-width: 576px) {
+    .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem; /* Зменшуємо заголовок для мобілок */
+    }
+
+    .cta-section {
+        padding: 40px 15px !important;
+    }
+}
+/* --- КОЛЬОРИ СЕКЦІЙ (ЧЕРГУВАННЯ) --- */
+.bg-blue-dark {
+    background-color: #0f172a !important;
+}
+
+.bg-gray-dark {
+    background-color: #1e293b !important; /* Графітовий для контрасту */
+}
+
+/* --- НАВІГАЦІЯ --- */
+.navbar {
+    background-color: #0f172a !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+/* Гамбургер для мобільних */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+/* --- ХЕРО-СЕКЦІЯ --- */
+.welcome-image {
+    background-image:url("../img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: 4rem;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+/* --- КАРТКИ ТА ЕЛЕМЕНТИ --- */
+.card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: #3b82f6;
+}
+
+.step-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #3b82f6;
+    opacity: 0.3;
+}
+
+/* Секція заклик до дії (CTA) */
+.cta-section {
+    background-color: #1e293b;
+    border-radius: 25px;
+    padding: 60px 40px;
+    border: 1px solid #334155;
+}
+
+.style-item {
+    background: rgba(59, 130, 246, 0.05);
+    border-left: 4px solid #3b82f6;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 0 12px 12px 0;
+}
+
+.style-item i {
+    color: #3b82f6;
+    margin-right: 12px;
+}
+
+/* --- СТОРІНКА УМОВ ВИКОРИСТАННЯ --- */
+.terms-header {
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    padding: 140px 0 60px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terms-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.legal-badge {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+/* --- ФУТЕР --- */
+footer {
+    background-color: #020617 !important;
+    border-top: 1px solid #1e293b;
+}
+
+/* --- АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ --- */
+@media (max-width: 768px) {
+    .welcome-image {
+        padding-top: 140px !important; /* Відступ, щоб меню не перекривало заголовок */
+        padding-bottom: 60px !important;
+        min-height: auto;
+        text-align: center;
+        background-attachment: scroll;
+    }
+
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+
+    .hero-title br {
+        display: none;
+    }
+
+    .welcome-image .btn {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 10px;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(15px);
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .terms-card, .cta-section {
+        padding: 30px 20px !important;
+    }
+    
+    .display-4 {
+        font-size: 2.2rem !important;
+    }
+}
+/* Дублируем логику выделения с главной страницы */
+.card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Обрезает углы серого фона сверху */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Подпрыгивание вверх */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Тень */
+    border-color: #3b82f6; /* Синяя рамка */
+}
+
+/* Дополнительно: чтобы кнопка внутри карточки тоже реагировала красиво */
+.card .btn-primary {
+    transition: 0.3s;
+}
+.card:hover .btn-primary {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+/* СЕКЦІЯ ІНСТРУКЦІЇ (БЕЗ АНІМАЦІЙ) */
+.step-icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 2; /* Щоб бути над лінією */
+}
+
+.step-badge {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    background: #3b82f6;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Пунктирна лінія між кроками */
+.step-line {
+    position: absolute;
+    top: 30px; /* Половина висоти іконки */
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    border-top: 2px dashed #334155;
+    z-index: 1;
+}
+
+.step-item {
+    position: relative;
+    z-index: 2;
+}
+
+/* КАРТКИ ШАБЛОНІВ (стиль як на головній) */
+.card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border-color: #3b82f6;
+}
+
+.btn-outline-primary {
+    font-size: 0.8rem;
+    padding: 5px 20px;
+    border-width: 1.5px;
+}
+/* Стиль для прев'ю візитівки */
+.preview-box {
+    background: #111827;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px dashed #334155;
+    position: sticky;
+    top: 100px;
+}
+
+canvas {
+    max-width: 100%; /* Щоб не вилазив за межі на мобільних пристроїв*/
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff; /* Білий фон для самої візитівки */
+
+        .form-control:focus {
+            background-color: #2d3748;
+            color: white;
+            border-color: #3b82f6;
+        }}
+        /* Адаптація кроків для мобільних пристроїв */
+@media (max-width: 768px) {
+    /* Робимо контейнер флекс-стовпчиком та центруємо */
+    .d-flex.flex-column.flex-md-row {
+        align-items: center !important;
+        text-align: center;
+    }
+
+    /* Ховаємо стару горизонтальну лінію */
+    .step-line.d-md-block {
+        display: none !important;
+    }
+
+    /* Створюємо вертикальну лінію між кроками */
+    .step-item:not(:last-child)::after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 30px;
+        border-left: 2px dashed #334155;
+        margin: 15px auto; /* Відступ між іконкою та наступним кроком */
+    }
+
+    .step-item {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .step-item p {
+        margin-bottom: 5px;
+    }
+}
+ 
