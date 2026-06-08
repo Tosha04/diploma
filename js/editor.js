@@ -118,10 +118,9 @@ function draw() {
 downloadBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF({ orientation: 'landscape', unit: 'px', format: [1000, 600] });
+    const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: [96, 56] });
     const imgData = canvas.toDataURL('image/jpeg', 1.0);
-    pdf.addImage(imgData, 'JPEG', 0, 0, 1000, 600);
-    pdf.save('vizitka.pdf');
+    pdf.addImage(imgData, 'JPEG', 0, 0, 96, 56);
 });
 
 // Консоль для координат
